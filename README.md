@@ -1,7 +1,7 @@
 SecureSight CCTV Monitoring Dashboard
 A modern, real-time CCTV incident monitoring and management system built with Next.js, featuring an intuitive dashboard for security personnel to monitor, analyze, and resolve security incidents.
 
-## 🎥 Demo
+## 🎥 Demo (Please click on the video and wait for video to download watch how site looks and database in the video itself)
 
 [![Watch the video](public/image.png)](public/demo.mp4)
 
