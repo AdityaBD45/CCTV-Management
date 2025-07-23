@@ -9,18 +9,17 @@ datasource db {
 }
 
 model Camera {
-  id        Int       @id @default(autoincrement())
+  id        Int        @id @default(autoincrement())
   name      String
   location  String
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
   incidents Incident[]
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
 }
 
 model Incident {
   id           Int      @id @default(autoincrement())
   cameraId     Int
-  camera       Camera   @relation(fields: [cameraId], references: [id])
   type         String
   tsStart      DateTime
   tsEnd        DateTime
@@ -28,7 +27,8 @@ model Incident {
   resolved     Boolean  @default(false)
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
-  
+  camera       Camera   @relation(fields: [cameraId], references: [id])
+
   @@index([resolved])
   @@index([tsStart])
 }
