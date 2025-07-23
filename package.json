@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-"postinstall": "prisma generate && DATABASE_URL=$DATABASE_URL prisma migrate deploy"
+"postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^6.12.0",
